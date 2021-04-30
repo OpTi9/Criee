@@ -1,7 +1,8 @@
 # Criee
 Created using:
-* laravel
-* composer
+* [Laravel](https://laravel.com/)
+* [Blade templates](https://laravel.com/docs/8.x/blade)
+* [Composer](https://getcomposer.org/)
 
 To start:
 * import crieeDB.sql script first
