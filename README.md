@@ -13,4 +13,7 @@ Users:
 * client2 (login: client2@a.a password: client2)
 
 Screenshots:
+![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg)
+![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg)
+![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg)
 ![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg)
