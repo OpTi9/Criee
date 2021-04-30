@@ -13,11 +13,13 @@ Users:
 * client2 (login: client2@a.a password: client2)
 
 Screenshots:
-* Main page:
-![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg)
-* Search page:
-![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg)
-* Product page:
-![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg)
-* Cart page:
-![alt text](https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg)
+<p align="center">
+  * Main page:
+  <img width="600" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg">
+  * Search page:
+  <img width="600" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg">
+  * Product page:
+  <img width="600" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg">
+  * Cart page:
+  <img width="600" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg">
+</p>
