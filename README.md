@@ -16,20 +16,20 @@ Screenshots:
 
 * Main page:
 <p align="center">
-  <img width="800" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg">
+  <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg">
 </p>
 
 * Search page:
 <p align="center">
-   <img width="800" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg">
 </p>
 
 * Product page:
 <p align="center">
-   <img width="800" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg">
 </p>
 
 * Cart page:
 <p align="center">
-   <img width="800" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg">
 </p>
