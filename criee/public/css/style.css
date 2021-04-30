@@ -1,0 +1,62 @@
+body {
+    background: #fff;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/* images on main page */
+.card-img {
+    height: 200px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-img, .card-author, .card-date, .card-description {
+    margin-bottom: 10px;
+
+}
+
+/* image on product's page */
+.card-img__max {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-btn{
+    display: flex;
+}
+
+.card-btn a {
+    margin-right: 10px;
+}
+
+.bottomMargin {
+    margin-top: 7px;
+    margin-bottom: 150px;
+}
+
+.ajouterLot {
+    margin-bottom: 100px;
+}
+
+.form-control{
+    width: 90%;
+}
+
+.form-control-enchere{
+    width: 10%;
+}
