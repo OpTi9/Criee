@@ -5,7 +5,7 @@ Created using:
 
 To start:
 * import crieeDB.sql script first
-* lauch project: ** php artisan serve **
+* lauch project: **php artisan serve**
 
 Users:
 * admin (login: admin@a.a password: admin)
