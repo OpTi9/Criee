@@ -20,7 +20,9 @@ class cartController extends Controller
     public function show($id)
     {
         // get all user bids
-        $carts = Encherir::where('user_id', '=', \Auth::user()->id)->simplePaginate(8);
+        $carts = Encherir::where('user_id', '=', \Auth::user()->id)
+            ->orderBy('date_enchere', 'desc')
+            ->simplePaginate(8);
 
 
         // pass all the info to the view

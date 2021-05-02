@@ -130,7 +130,7 @@ class PostController extends Controller
             ['description', '=', $post->description],
         ])->value('prixDepart');
 
-        $current_date_time = \Illuminate\Support\Carbon::now()->isoFormat('YYYY-MM-DD hh:mm:ss');
+        $current_date_time = \Illuminate\Support\Carbon::now('Europe/Paris')->isoFormat('YYYY-MM-DD HH:mm:ss');
 
         // inserting values to encherir table:
         $enchere = new Encherir();
@@ -159,6 +159,7 @@ class PostController extends Controller
         // variable stores all info from db corresponding to this id
         $post = Post::join('users', 'author-id', '=', 'users.id')
                 ->find($id);
+        $postPublishDate = Post::where('post_id','=',$id)->value('created_at');
 
         // values of lot:
         $datePeche=DatePeche::where('date_id','=', $post->date_id)->value('datePeche');
@@ -174,6 +175,18 @@ class PostController extends Controller
             ['post_id', '=', $post->post_id],
             ['prix', '=', $post->prixActuel]
         ])->value('user_id');
+
+        // time untill end:
+        $dateEnchere=Encherir::where([
+            ['post_id', '=', $post->post_id],
+            ['prix', '=', $post->prixActuel]
+        ])->value('date_enchere');
+        // current time
+        $now = \Illuminate\Support\Carbon::now('Europe/Paris');
+        $enchereEnd = new \DateTime($dateEnchere);
+        $enchereEnd->add( new \DateInterval('PT' . 1 . 'M'));
+        $interval = $enchereEnd->diff($now);
+
         $encherisseurActuel=User::where('id', '=', $encherisseurId)->value('name');
 
         //$enchere = Encherir::join('users',);
@@ -185,7 +198,9 @@ class PostController extends Controller
         }
 
         // pass all the info to the view
-        return view('posts.show', compact('post','datePeche','espece','taille','qualite','bac','bateau','present','prixMinEnchere','encherisseurActuel'));
+        return view('posts.show', compact('post','postPublishDate','datePeche','espece','taille',
+            'qualite','bac','bateau','present',
+            'prixMinEnchere','encherisseurActuel','dateEnchere', 'interval'));
     }
 
     /**
@@ -242,7 +257,7 @@ class PostController extends Controller
             return redirect()->route('post.index')->withErrors('Accès refusé');
         }
 
-        $current_date_time = \Illuminate\Support\Carbon::now()->isoFormat('YYYY-MM-DD hh:mm:ss');
+        $current_date_time = \Illuminate\Support\Carbon::now('Europe/Paris')->isoFormat('YYYY-MM-DD HH:mm:ss');
 
         // inserting values to encherir table:
         $enchere = DB::table('encherirs')
@@ -320,9 +335,7 @@ class PostController extends Controller
         }
 
         $enchere = DB::table('encherirs')
-            ->where('user_id', '=', $authorId)
             ->where('post_id', '=', $post->post_id)
-            ->where('prix', '=', $post->prixDepart)
             ->delete();
 
         $post->delete();

@@ -51,12 +51,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-date">Date poste: <b>{{ $post->created_at->diffForHumans() }}</b> ( {{ $post->created_at }} ) </div>
+                        <div class="card-date">Date poste: <b>{{ $postPublishDate->diffForHumans() }}</b> ( {{ $post->created_at }} ) </div>
 
                         <div class="card-author">Vendeur: <b>{{ $post->name }}</b> </div>
-                        <div class="card-author text-light bg-dark">Enchère en cours: <b>{{$encherisseurActuel}} — {{ $post->prixActuel }} €</b> </div>
+                        <div class="card-author text-light bg-dark">Dernière enchère: <b>{{$encherisseurActuel}} — {{ $post->prixActuel }} €</b> </div>
+                        @if($interval->invert == 1)
+                            <div class="card-author text-dark">Temps restant: <b>{{$interval->format("%h heures %i minutes")}}</b> </div>
+                        @endif
                         @auth
                             @if(Auth::user()->id !== $post->{'author-id'})
+                                @if($interval->invert == 1)
                                 <div class="form-group">
                                     <form action="{{ route('enchere.store') }}" method="post" enctype="multipart/form-data" class="ajouterEnchere">
                                         @csrf
@@ -65,6 +69,9 @@
                                         <input type="submit" value="Encherir" class="btn btn-outline-dark">
                                     </form>
                                 </div>
+                                @else
+                                    <div class="card-author text-light bg-danger">Enchère terminée</div>
+                                @endif
                             @endif
                         @endauth
 

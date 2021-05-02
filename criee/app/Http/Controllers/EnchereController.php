@@ -26,11 +26,11 @@ class EnchereController extends Controller
         // check if user has rights to edit
         if ($postAuthor == \Auth::user()->id)
         {
-            return redirect()->route('post.index')->withErrors('Enchere sur un lot propre est interdit');
+            return redirect()->route('post.index')->withErrors('Action interdit');
         }
 
         $enchere = new Encherir();
-        $current_date_time = \Illuminate\Support\Carbon::now()->isoFormat('YYYY-MM-DD hh:mm:ss');
+        $current_date_time = \Illuminate\Support\Carbon::now('Europe/Paris')->isoFormat('YYYY-MM-DD HH:mm:ss');
 
         $enchere->user_id = \Auth::user()->id;
         $enchere->post_id = $post_id;

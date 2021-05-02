@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h1>Enchères en cours:</h1>
+    <h1>Mes enchères:</h1>
 
     <div class="row">
         @foreach($carts as $cart)
