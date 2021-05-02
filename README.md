@@ -1,7 +1,8 @@
 # Criee
 Created using:
-* laravel
-* composer
+* [Laravel](https://laravel.com/)
+* [Blade templates](https://laravel.com/docs/8.x/blade)
+* [Composer](https://getcomposer.org/)
 
 To start:
 * import crieeDB.sql script first
@@ -11,3 +12,25 @@ Users:
 * admin (login: admin@a.a password: admin)
 * client (login: client@a.a password: client)
 * client2 (login: client2@a.a password: client2)
+
+Screenshots:
+
+* Main page:
+<p align="center">
+  <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeMain.jpg">
+</p>
+
+* Search page:
+<p align="center">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeSearch.jpg">
+</p>
+
+* Product page:
+<p align="center">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeLot.jpg">
+</p>
+
+* Cart page:
+<p align="center">
+   <img width="900" src="https://github.com/OpTi9/Criee/blob/main/screenshots/crieeCart.jpg">
+</p>
