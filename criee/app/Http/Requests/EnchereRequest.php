@@ -26,7 +26,7 @@ class EnchereRequest extends FormRequest
     {
         return [
             //
-            'enchere' => 'required|min:'
+            'enchere' => 'required'
         ];
     }
 }
